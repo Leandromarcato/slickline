@@ -25,11 +25,11 @@ function Login() {
       console.log("Usuario autenticado:", newtoken);
       // Redirige al usuario al panel u otra página
       if (roles.includes("operario")) {
-        navigate("/Pozos/AgregarPozos");
+        navigate("/Operario");
       } else if (roles.includes("superadmin")) {
-        navigate("/h/superAdmin");
+        navigate("/SuperAdmin");
       } else {
-        navigate("/h/Admin"); 
+        navigate("/"); 
       }
     } catch (error) {
       console.error("Error al iniciar sesión:", error);

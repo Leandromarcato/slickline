@@ -4,19 +4,15 @@ import { AuthProvider } from "./context/AuthContext"; // Importa tu contexto de 
 import Login from "./pages/Autenticacion/Login";
 import Register from "./pages/Autenticacion/Register";
 import Root from "./layouts/Root";
-import SuperAdminPanel from "./pages/SuperAdminPanel";
 import Admin from "./pages/Admin";
-import Cargararchivo from "./layouts/Carga_De_Datos/Cargararchivo";
-import Cargadatos from "./layouts/Carga_De_Datos/Cargadatos";
-import Posos from "./layouts/Posos";
 import Cargapozos from "./layouts/Pozos/Cargapozos";
 import AgregarPozo from "./layouts/Pozos/AgregarPozo"
-import MostrarPozo from "./layouts/Pozos/MostrarPozo";
 import Control_Datos from "./layouts/Carga_De_Datos/Control_Datos";
-import Prueba from "./layouts/Carga_De_Datos/Prueba";
-import Mapa from "./components/Mapa";
+import Operario from "./components/Operario";
 import Welcome from "./components/Welcome";
-import Navbar from "./components/Navbar";
+import ElejirArchivo from "./layouts/Pozos/ElejirArchivo";
+import SuperAdmin from  './components/SuperAdmin';
+import Mapa from "./components/Mapa";
 function App() {
   return (
     <div>
@@ -25,23 +21,25 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome/>}></Route>
             <Route path="/R/*" element={<Root/>}>
-              <Route path="register" element={<Register />} />
-              <Route path="login" element={<Login />}/>
+              <Route path="login" element={<Login/>}/>
             </Route>
 
-            <Route path="h/*" element={<Posos />}>
-              <Route path="superAdmin" element={<SuperAdminPanel />} />
-              <Route path="cargar" element={<Cargadatos />} />
-              <Route path="mapa" element={<Mapa />}/>
-              <Route path="Admin"  element={<Admin/>}></Route>
+            <Route path="/Operario/*" element={<Operario/>}>
+            <Route path="CargaManual" element={<Cargapozos/>}></Route>
+            <Route path="CargarArchivo" element={<ElejirArchivo/>}></Route>
+            <Route path="mapa" element={<Mapa/>}></Route>
             </Route>
 
-            <Route path="/Pozos/*" element={<MostrarPozo />}>
-              <Route path="CargarArchivo" element={<Cargararchivo />} />
-              <Route path="ListarPozos" element={<Cargapozos />} />
-              <Route path="AgregarPozos" element={<AgregarPozo />} />
-              <Route path="Control_Datos" element={<Control_Datos />}></Route>
-              <Route path="Prueba" element={<Prueba />}></Route>
+            <Route path="/Admin/*" element={<Admin/>}>
+            <Route path="Registrar" element={<Register/>}></Route>
+            <Route path="AgregarPozos" element={<AgregarPozo/>}></Route>
+            <Route path="MostrarGraficos" element={<Control_Datos/>}></Route>
+            </Route>
+
+            <Route path="/SuperAdmin/*" element={<SuperAdmin/>}>
+            <Route path="Registrar" element={<Register/>}></Route>
+            <Route path="AgregarPozos" element={<AgregarPozo/>}></Route>
+            <Route path="MostrarGraficos" element={<Control_Datos/>}></Route>
             </Route>
           </Routes>
         </AuthProvider>

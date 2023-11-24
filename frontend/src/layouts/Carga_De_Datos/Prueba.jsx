@@ -204,7 +204,7 @@ function Prueba({ pozoSeleccionado }) {
           Realizar solicitud POST
         </button>
       </form>
-      <p className="mt-4">Respuesta: {response}</p>
+      {/* <p className="mt-4">Respuesta: {response}</p> */}
     </div>
   );
 }

@@ -76,9 +76,8 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import MiComponente from "../Carga_De_Datos/Ejemplo"; // Asegúrate de importar el componente correctamente
-import Prueba from "../Carga_De_Datos/Prueba";
-const Cargapozos = () => {
+import SubirArchivo from "../Carga_De_Datos/SubirArchivo";
+const ElejirArchivo = () => {
   const [pozos, setPozos] = useState([]);
   const [selectedPozo, setSelectedPozo] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -120,12 +119,17 @@ const Cargapozos = () => {
           No hay pozos cargados en la base de datos.
         </div>
       )}
-  
-      {mostrarFormulario && <Prueba pozoSeleccionado={selectedPozo} />}
+      <Link
+        to="/Pozos/CargarArchivo"
+        className="block mt-4 text-blue-500 hover:text-blue-700"
+      >
+        Ir a Agregar Pozo
+      </Link>
+      {mostrarFormulario && <SubirArchivo pozoSeleccionado={selectedPozo} />}
       
     </div>
   );
 };
 
-export default Cargapozos;
+export default ElejirArchivo;
 

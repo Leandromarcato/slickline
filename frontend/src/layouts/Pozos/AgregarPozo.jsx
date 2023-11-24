@@ -117,7 +117,7 @@ const AgregarPozo = () => {
           value={nombrePozo}
           onChange={(e) => setNombrePozo(e.target.value)}
           placeholder="Nombre del pozo"
-          className="border border-gray-300 p-2 w-full rounded focus:outline-none focus:ring focus:border-blue-400"
+          className="border border-gray-300  text-black p-2 w-full rounded focus:outline-none focus:ring focus:border-blue-400"
         />
       </div>
 
@@ -134,7 +134,7 @@ const AgregarPozo = () => {
         onChange={setSelectedPozo}
         isSearchable={false}
         placeholder="Selecciona un pozo"
-        className="mt-4"
+        className="mt-4 text-black"
       />
 
       {selectedPozo && (
@@ -155,7 +155,7 @@ const AgregarPozo = () => {
       )}
 
 <Link
-  to="/Pozos/ListarPozos"
+  to="/Operario"
   className="block mt-6 text-blue-500 hover:text-blue-700"
 >
   Ir a la lista de pozos
