@@ -12,7 +12,9 @@ import Operario from "./components/Operario";
 import Welcome from "./components/Welcome";
 import ElejirArchivo from "./layouts/Pozos/ElejirArchivo";
 import SuperAdmin from  './components/SuperAdmin';
-import Mapa from "./components/Mapa";
+import Mapa from './components/Mapa'
+import User from "./pages/User";
+import Prediccion from "./layouts/Prediccion";
 function App() {
   return (
     <div>
@@ -34,6 +36,8 @@ function App() {
             <Route path="Registrar" element={<Register/>}></Route>
             <Route path="AgregarPozos" element={<AgregarPozo/>}></Route>
             <Route path="MostrarGraficos" element={<Control_Datos/>}></Route>
+            <Route path="Prediccion" element={<Prediccion/>}></Route>
+            <Route path="User" element={<User/>}></Route>
             </Route>
 
             <Route path="/SuperAdmin/*" element={<SuperAdmin/>}>

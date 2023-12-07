@@ -18,11 +18,11 @@ function Login() {
     try {
       const response = await loginRequest(data, token);
       const { token: newtoken, roles } = response.data;
-      console.log(response.data);
+      
 
       login(newtoken, roles);
       // Almacena el token en el contexto de autenticación
-      console.log("Usuario autenticado:", newtoken);
+      console.log("Usuario autenticado:", roles);
       // Redirige al usuario al panel u otra página
       if (roles.includes("operario")) {
         navigate("/Operario");

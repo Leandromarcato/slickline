@@ -32,7 +32,7 @@ function Mapa() {
   );
 }
 
-// export default Mapa;
+ export default Mapa;
 
 // import React from 'react'
 // import { FeatureGroup, MapContainer, Marker, Polygon, Popup, TileLayer } from 'react-leaflet'

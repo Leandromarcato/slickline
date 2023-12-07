@@ -1,11 +1,13 @@
 import React from 'react'
+import img from "./ID_refsaHidro.png";
 import { Outlet, Link } from 'react-router-dom'
 
 function SuperAdmin() {
   return (
-    <div className='bg-gradient-to-b from-blue-600 to-gray-300 h-screen  text-white'>
+    <div className='bg-gradient-to-bl from-blue-500 to-gray-300 h-screen  text-white'>
       <nav className="flex items-center justify-between bg-gray-500 p-4 text-white">
     <div className="flex items-center">
+    <img src={img} alt="Logo" className="w-40 h-10 mr-6" />
       <span className="text-white text-lg font-bold">
         Analisis de Dato de SlickLine
       </span>

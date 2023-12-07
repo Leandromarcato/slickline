@@ -1,4 +1,5 @@
 import React from "react";
+import img from "./ID_refsaHidro.png";
 import { Link } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
 
@@ -14,12 +15,8 @@ function Welcome() {
 
   return (
     <div className="welcome-page bg-gradient-to-b from-blue-500 to-gray-300 h-screen flex flex-col justify-center items-center text-white p-8">
-      <h1 className="text-4xl font-bold mb-4 text-blue-900" >Bienvenido a SmartDev</h1>
-      <p className="text-lg mb-8">
-        Explora todas las increíbles características que tenemos para ofrecerte,
-        incluyendo datos de temperatura y presión en función de la profundidad.
-      </p>
-
+      <img src={img} alt="Logo" className="w-30 h-20 mr-3" />
+     
       {/* Contenedor flex para la imagen y el gráfico */}
       <div className="flex items-center">
         {/* Imagen */}
@@ -28,6 +25,7 @@ function Welcome() {
           alt="Imagen Ejemplo"
           className="w-90 h-90 object-cover rounded-full mr-14"
         />
+        
 
         {/* Gráfico */}
         <div >
@@ -43,7 +41,6 @@ function Welcome() {
             <Legend />
             <Line type="monotone" dataKey="temperatura" stroke="#3182CE" />
           </LineChart>
-          
           
         </div>
       </div>
