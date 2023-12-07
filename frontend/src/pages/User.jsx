@@ -6,8 +6,7 @@ function User() {
    
     const apiUrl = "http://localhost:3000"; 
 
-   
-
+  
     // Obtener todos los usuarios activos
     axios
       .get(`${apiUrl}/user/todos`)
