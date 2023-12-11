@@ -29,7 +29,7 @@ function App() {
             <Route path="/Operario/*" element={<Operario/>}>
             <Route path="CargaManual" element={<Cargapozos/>}></Route>
             <Route path="CargarArchivo" element={<ElejirArchivo/>}></Route>
-            <Route path="mapa" element={<Mapa/>}></Route>
+           
             </Route>
 
             <Route path="/Admin/*" element={<Admin/>}>
@@ -37,6 +37,7 @@ function App() {
             <Route path="AgregarPozos" element={<AgregarPozo/>}></Route>
             <Route path="MostrarGraficos" element={<Control_Datos/>}></Route>
             <Route path="Prediccion" element={<Prediccion/>}></Route>
+            <Route path="mapa" element={<Mapa/>}></Route>
             <Route path="User" element={<User/>}></Route>
             </Route>
 

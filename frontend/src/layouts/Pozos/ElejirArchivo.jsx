@@ -108,6 +108,7 @@ const ElejirArchivo = () => {
       <h2 className="text-2xl font-bold mb-4">Lista de Pozos</h2>
       {options.length > 0 ? (
         <Select
+          className="text-black"
           options={options}
           value={selectedPozo}
           onChange={handlePozoSelect}
@@ -119,12 +120,8 @@ const ElejirArchivo = () => {
           No hay pozos cargados en la base de datos.
         </div>
       )}
-      <Link
-        to="/Pozos/CargarArchivo"
-        className="block mt-4 text-blue-500 hover:text-blue-700"
-      >
-        Ir a Agregar Pozo
-      </Link>
+      <br />
+     
       {mostrarFormulario && <SubirArchivo pozoSeleccionado={selectedPozo} />}
       
     </div>

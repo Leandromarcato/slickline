@@ -2,6 +2,7 @@ import axios from "axios";
 
 const servidor = "http://localhost:3000/auth";
 
+
 // export const registerRequest = (user) => axios.post(`${servidor}/register`, user)
 
 // export const loginRequest = (dato) => axios.post(`${servidor}/login`, dato)

@@ -74,8 +74,8 @@ function Prueba({ pozoSeleccionado }) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="max-w-2xl mx-auto bg-slate-400">
+      <form className=" shadow-md rounded px-8 pt-6 pb-8 mb-4 bg-gray-400">
         {formList.map((form, index) => (
           <div key={index} className="mb-4">
             <div className="grid grid-cols-2 gap-4">
@@ -189,13 +189,7 @@ function Prueba({ pozoSeleccionado }) {
             </button>
           </div>
         ))}
-        <button
-          type="button"
-          onClick={addRow}
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4 focus:outline-none focus:shadow-outline"
-        >
-          Agregar Fila
-        </button>
+       
         <button
           type="button"
           onClick={postData}

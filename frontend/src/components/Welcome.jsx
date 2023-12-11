@@ -16,7 +16,8 @@ function Welcome() {
   return (
     <div className="welcome-page bg-gradient-to-b from-blue-500 to-gray-300 h-screen flex flex-col justify-center items-center text-white p-8">
       <img src={img} alt="Logo" className="w-30 h-20 mr-3" />
-     
+     <br />
+     <p>Analisis de Dato de Pozo de Petroleo a travez de SlickLine</p>
       {/* Contenedor flex para la imagen y el gráfico */}
       <div className="flex items-center">
         {/* Imagen */}
@@ -26,9 +27,10 @@ function Welcome() {
           className="w-90 h-90 object-cover rounded-full mr-14"
         />
         
+        
 
         {/* Gráfico */}
-        <div >
+        <div className="shadow-lg p-4 bg-blue-300">
           <LineChart
             width={500}
             height={500}

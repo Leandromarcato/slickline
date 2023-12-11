@@ -21,19 +21,17 @@ function SuperAdmin() {
             </Link>
           </button>
         </li>
-
         <li>
-          <button className="bg-blue-400 text-white font-bold py-2 px-4 rounded-2xl hover:bg-gray-600">
-            <Link to="/SuperAdmin/AgregarPozos" className="text-zinc-100">
-              Agregar Pozos
+          <button className="bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl hover:bg-gray-600">
+            <Link to="/Admin" className="text-zinc-100">
+            interfaz de Admin
             </Link>
           </button>
         </li>
-
         <li>
           <button className="bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl hover:bg-gray-600">
-            <Link to="/SuperAdmin/MostrarGraficos" className="text-zinc-100">
-            Graficos 
+            <Link to="/operario" className="text-zinc-100">
+            interfaz de operario
             </Link>
           </button>
         </li>

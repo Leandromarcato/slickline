@@ -109,6 +109,7 @@ const Cargapozos = () => {
       <h2 className="text-2xl font-bold mb-4">Lista de Pozos</h2>
       {options.length > 0 ? (
         <Select
+          className="text-black"
           options={options}
           value={selectedPozo}
           onChange={handlePozoSelect}
@@ -119,7 +120,9 @@ const Cargapozos = () => {
         <div className="text-red-600">
           No hay pozos cargados en la base de datos.
         </div>
+        
       )}
+      <br />
   
       {mostrarFormulario && <Prueba pozoSeleccionado={selectedPozo} />}
       
